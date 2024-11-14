@@ -80,11 +80,13 @@ body {
 .section-heading {
     margin-bottom: 3rem;
     text-align: center;
+    width: 100%;  /* Ensures the heading spans full width */
 }
 
 .section-heading h2 {
     font-size: 2.5rem;
     color: #333;
+    text-align: center;  /* Extra insurance for centering */
 }
 
 .resume-container {
@@ -127,7 +129,7 @@ body {
 }
 
 .resume-image {
-    flex: 0 0 250px;
+    flex: 0 0 200px;  /* Reduced from 250px */
     margin-right: 2rem;
     display: flex;
     align-items: center;
@@ -137,12 +139,13 @@ body {
 
 .resume-photo {
     width: 100%;
-    height: 250px;
+    height: 200px;  /* Reduced from 250px */
     object-fit: contain;
     background: white;
     border-radius: 6px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
+    padding: 1.5rem;  /* Slightly increased padding */
+    max-width: 180px;  /* Added max-width to constrain very wide images */
 }
 
 .resume-text {
@@ -195,8 +198,9 @@ body {
 
 /* Responsive design */
 @media (max-width: 768px) {
-    .resume-container {
-        padding: 2rem;
+    .resume-photo {
+        height: 150px;  /* Reduced from 200px for mobile */
+        max-width: 150px;
     }
 
     .resume-content {
