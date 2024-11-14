@@ -173,6 +173,7 @@ body {
     line-height: 1.6;
     margin: 0;
     font-size: 1.1rem;
+    margin-bottom: 0.5rem;
 }
 
 .resume-connector {
@@ -361,4 +362,17 @@ body {
         right: -8px;
         bottom: -8px;
     }
+}
+
+.read-more {
+    display: inline-block;
+    color: #666;
+    text-decoration: none;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+.read-more:hover {
+    color: #333;
+    text-decoration: underline;
 }
