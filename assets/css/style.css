@@ -79,15 +79,20 @@ body {
 /* Add these styles to your style.css file */
 
 .resume-container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 4rem;
     background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Centers content horizontally */
 }
 
 .resume-item {
     position: relative;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;  /* Increased spacing between items */
+    width: 100%;
+    max-width: 800px;    /* Maximum width for each item */
 }
 
 .resume-content {
@@ -95,52 +100,71 @@ body {
     background: #fff;
     border: 1px solid #e5e5e5;
     border-radius: 8px;
-    padding: 1.5rem;
+    padding: 2rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Add gray background box */
+.resume-content::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: #f5f5f5;
+    border-radius: 12px;
+    z-index: -1;
 }
 
 .resume-image {
-    flex: 0 0 200px;
+    flex: 0 0 250px;  /* Slightly larger images */
     margin-right: 2rem;
 }
 
 .resume-photo {
     width: 100%;
-    height: 200px;
+    height: 250px;  /* Matched with flex basis */
     object-fit: cover;
-    border-radius: 4px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .resume-text {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Centers content vertically */
 }
 
 .resume-text h3 {
     margin: 0 0 0.5rem 0;
     color: #333;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
 }
 
 .resume-text .date {
     display: block;
     color: #666;
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
 }
 
 .resume-text p {
     color: #555;
     line-height: 1.6;
     margin: 0;
+    font-size: 1.1rem;
 }
 
 .resume-connector {
     position: absolute;
     left: 50%;
-    bottom: -2rem;
+    bottom: -4rem;  /* Adjusted for new spacing */
     transform: translateX(-50%);
     width: 2px;
-    height: 2rem;
+    height: 4rem;  /* Adjusted for new spacing */
     background: #e5e5e5;
 }
 
@@ -148,18 +172,37 @@ body {
     display: none;
 }
 
+/* Center the content section itself */
+.content-section#experience {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
+    .resume-container {
+        padding: 2rem;
+    }
+
     .resume-content {
         flex-direction: column;
+        padding: 1.5rem;
     }
 
     .resume-image {
         margin-right: 0;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
     }
 
     .resume-photo {
-        height: 150px;
+        height: 200px;
+    }
+
+    .resume-content::before {
+        top: -8px;
+        left: -8px;
+        right: -8px;
+        bottom: -8px;
     }
 }
