@@ -55,9 +55,9 @@ body {
 .profile-container h2 {
     color: #fff;
     margin-top: 1rem;
-    font-size: 2rem;  /* Increased from 1.5rem */
+    font-size: 2rem;
     font-weight: 600;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);  /* Stronger shadow for better contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     letter-spacing: 0.5px;
 }
 
@@ -65,7 +65,7 @@ body {
     color: #fff;
     margin-top: 0.5rem;
     font-size: 1.1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);  /* Matching shadow for consistency */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     letter-spacing: 0.3px;
 }
 
@@ -76,7 +76,16 @@ body {
     z-index: 1;
 }
 
-/* Add these styles to your style.css file */
+/* Experience Section Styles */
+.section-heading {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.section-heading h2 {
+    font-size: 2.5rem;
+    color: #333;
+}
 
 .resume-container {
     max-width: 900px;
@@ -85,14 +94,14 @@ body {
     background: #fff;
     display: flex;
     flex-direction: column;
-    align-items: center;  /* Centers content horizontally */
+    align-items: center;
 }
 
 .resume-item {
     position: relative;
-    margin-bottom: 4rem;  /* Increased spacing between items */
+    margin-bottom: 4rem;
     width: 100%;
-    max-width: 800px;    /* Maximum width for each item */
+    max-width: 800px;
 }
 
 .resume-content {
@@ -105,7 +114,6 @@ body {
     position: relative;
 }
 
-/* Add gray background box */
 .resume-content::before {
     content: '';
     position: absolute;
@@ -119,23 +127,29 @@ body {
 }
 
 .resume-image {
-    flex: 0 0 250px;  /* Slightly larger images */
+    flex: 0 0 250px;
     margin-right: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
 }
 
 .resume-photo {
     width: 100%;
-    height: 250px;  /* Matched with flex basis */
-    object-fit: cover;
+    height: 250px;
+    object-fit: contain;
+    background: white;
     border-radius: 6px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
 }
 
 .resume-text {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;  /* Centers content vertically */
+    justify-content: center;
 }
 
 .resume-text h3 {
@@ -161,10 +175,10 @@ body {
 .resume-connector {
     position: absolute;
     left: 50%;
-    bottom: -4rem;  /* Adjusted for new spacing */
+    bottom: -4rem;
     transform: translateX(-50%);
     width: 2px;
-    height: 4rem;  /* Adjusted for new spacing */
+    height: 4rem;
     background: #e5e5e5;
 }
 
@@ -172,10 +186,10 @@ body {
     display: none;
 }
 
-/* Center the content section itself */
 .content-section#experience {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     padding: 2rem;
 }
 
