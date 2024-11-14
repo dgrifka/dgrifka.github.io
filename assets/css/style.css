@@ -75,3 +75,77 @@ body {
     position: relative;
     z-index: 1;
 }
+
+/* Add these styles to your style.css file */
+
+.experience-flow {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.experience-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.experience-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.experience-image:hover {
+    transform: scale(1.05);
+}
+
+.arrow {
+    width: 100px;
+    margin: 0 2rem;
+    color: #666;
+}
+
+.arrow-svg {
+    width: 100%;
+    height: 50px;
+}
+
+.experience-content {
+    flex: 1;
+    padding: 1rem;
+}
+
+.experience-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.experience-content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Make the flow responsive */
+@media (max-width: 768px) {
+    .experience-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .experience-image {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 1rem;
+    }
+
+    .arrow {
+        transform: rotate(90deg);
+        margin: 1rem 0;
+    }
+}
