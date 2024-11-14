@@ -78,74 +78,88 @@ body {
 
 /* Add these styles to your style.css file */
 
-.experience-flow {
-    padding: 2rem;
-    max-width: 1200px;
+.resume-container {
+    max-width: 800px;
     margin: 0 auto;
+    padding: 2rem;
+    background: #fff;
 }
 
-.experience-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 3rem;
+.resume-item {
     position: relative;
+    margin-bottom: 2rem;
 }
 
-.experience-image {
-    width: 200px;
+.resume-content {
+    display: flex;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.resume-image {
+    flex: 0 0 200px;
+    margin-right: 2rem;
+}
+
+.resume-photo {
+    width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    border-radius: 4px;
 }
 
-.experience-image:hover {
-    transform: scale(1.05);
-}
-
-.arrow {
-    width: 100px;
-    margin: 0 2rem;
-    color: #666;
-}
-
-.arrow-svg {
-    width: 100%;
-    height: 50px;
-}
-
-.experience-content {
+.resume-text {
     flex: 1;
-    padding: 1rem;
 }
 
-.experience-content h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+.resume-text h3 {
+    margin: 0 0 0.5rem 0;
     color: #333;
+    font-size: 1.5rem;
 }
 
-.experience-content p {
+.resume-text .date {
+    display: block;
     color: #666;
-    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
 }
 
-/* Make the flow responsive */
+.resume-text p {
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.resume-connector {
+    position: absolute;
+    left: 50%;
+    bottom: -2rem;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 2rem;
+    background: #e5e5e5;
+}
+
+.resume-item:last-child .resume-connector {
+    display: none;
+}
+
+/* Responsive design */
 @media (max-width: 768px) {
-    .experience-item {
+    .resume-content {
         flex-direction: column;
-        text-align: center;
     }
 
-    .experience-image {
-        width: 150px;
-        height: 150px;
+    .resume-image {
+        margin-right: 0;
         margin-bottom: 1rem;
     }
 
-    .arrow {
-        transform: rotate(90deg);
-        margin: 1rem 0;
+    .resume-photo {
+        height: 150px;
     }
 }
