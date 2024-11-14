@@ -23,8 +23,20 @@ body {
     text-decoration: none;
     margin: 0 1rem;
     font-weight: bold;
+    transition: color 0.2s ease;
 }
 
+.site-nav a:hover {
+    color: #ccc;  /* Adds a subtle hover effect */
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+    .site-nav a {
+        margin: 0 0.5rem;  /* Reduce spacing on mobile */
+        font-size: 0.9rem;  /* Slightly smaller text on mobile */
+    }
+}
 .hero-section {
     background-image: url('/assets/images/baseball_stadium.jpg');
     background-size: cover;
