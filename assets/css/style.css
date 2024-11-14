@@ -224,3 +224,141 @@ body {
         bottom: -8px;
     }
 }
+
+
+/* Research Section Styles */
+.research-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.research-item {
+    position: relative;
+    margin-bottom: 4rem;
+    width: 100%;
+    max-width: 800px;
+}
+
+.research-content {
+    display: flex;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.research-content::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: #f5f5f5;
+    border-radius: 12px;
+    z-index: -1;
+}
+
+.research-image {
+    flex: 0 0 150px;
+    margin-right: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+}
+
+.research-photo {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    max-width: 180px;
+}
+
+.research-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.research-text h3 {
+    margin: 0 0 0.5rem 0;
+    color: #333;
+    font-size: 1.75rem;
+}
+
+.research-text .date {
+    display: block;
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.research-text p {
+    color: #555;
+    line-height: 1.6;
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+}
+
+.research-link {
+    display: inline-block;
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+.research-link:hover {
+    text-decoration: underline;
+}
+
+.research-connector {
+    position: absolute;
+    left: 50%;
+    bottom: -4rem;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 4rem;
+    background: #e5e5e5;
+}
+
+.research-item:last-child .research-connector {
+    display: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .research-content {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .research-image {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .research-photo {
+        height: 200px;
+    }
+
+    .research-content::before {
+        top: -8px;
+        left: -8px;
+        right: -8px;
+        bottom: -8px;
+    }
+}
