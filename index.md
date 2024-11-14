@@ -1,8 +1,6 @@
 ﻿---
 layout: home
-title: Welcome
+title: Derek Grifka
 ---
 
 # Welcome to My Site
-
-This is my GitHub Pages website powered by Jekyll.
