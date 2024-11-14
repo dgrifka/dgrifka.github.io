@@ -1,0 +1,12 @@
+# Basic site settings
+title: Derek Grifka's Homepage
+description: A collection of my background, code, projects, and more.
+author: Derek Grifka
+
+# Build settings
+markdown: kramdown
+theme: minima
+
+# URL settings
+baseurl: "" # leave empty if your site is at root level
+url: "https://dgrifka.github.io"
