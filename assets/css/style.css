@@ -226,10 +226,6 @@ body {
         margin-bottom: 1.5rem;
     }
 
-    .resume-photo {
-        height: 200px;
-    }
-
     .resume-content::before {
         top: -8px;
         left: -8px;
